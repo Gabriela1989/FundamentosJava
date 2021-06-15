@@ -25,6 +25,17 @@ public class Medidas {
             case "1":
                 area = calcularAreaDoQuadrado();
                 break;
+            case "2":
+                area = calcularAreaDoRetagulo();
+                break;
+            case "3":
+                area = calcularAreaDoTriangulo();
+                break;
+            case "4":
+                area = calcularAreaDoCirculo();
+                break;
+
+
 
             default:
                 System.out.println("Opcao Invalida: " + opcao);
@@ -41,6 +52,37 @@ public class Medidas {
         System.out.println("Digite o tamanho do lado: ");
         lado = entrada.nextInt(); // leitura do tamanho do lado
         return lado * lado; // retorna a área do quadrado
+    }
+
+    public static int calcularAreaDoRetagulo() {
+        int base;
+        int altura;
+
+        System.out.println("Digite o tamanho do base: ");
+        base = entrada.nextInt();
+        System.out.println("Digite o tamanho do altura: ");
+        altura = entrada.nextInt();
+        return base * altura;
+    }
+
+    public static int calcularAreaDoTriangulo() {
+        int base;
+        int altura;
+
+        System.out.println("Digite o tamanho do base: ");
+        base = entrada.nextInt();
+        System.out.println("Digite o tamanho do altura: ");
+        altura = entrada.nextInt();
+        return base * altura/2;
+    }
+
+    public static double calcularAreaDoCirculo() {
+        double pi = 3.1414;
+        int raio;
+
+        System.out.println("Digite o valor do raio: ");
+        raio = entrada.nextInt();
+        return raio * raio * pi;
     }
 
 }
