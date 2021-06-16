@@ -12,9 +12,10 @@ public class Medidas {
 
     // 3.2 - Métodos e Funções
     public static void main(String[] args){
-        String opcao;
-        double area = 0; // recebe o resultado dos cálculos de áreas
+        String opcao = "1";
+        double area = 0; // receber o resultado dos cálculos de áreas
 
+        while(!opcao.toUpperCase().equals("S")) {
 
             System.out.println("Escolha o Calculo Desejado");
             System.out.println("(1) - Area do Quadrado");
@@ -24,6 +25,7 @@ public class Medidas {
             System.out.println("(5) - Tabuada");
             System.out.println("(6) - Fibonacci");
             System.out.println("(7) - Contagem Regressiva");
+            System.out.println("(S) - Sair");
 
 
             opcao = entrada.nextLine(); // leitura da opção
@@ -48,15 +50,20 @@ public class Medidas {
                 case "7":
                     contagemRegressiva();
                     break;
+                case "s":
+                case "S":
+                    System.out.println("Agradecemos pela preferencia! Fui!!");
+                    break;
 
-               default:
+                default:
                     System.out.println("Opcao Invalida: " + opcao);
             }
             if (area > 0) {
                 System.out.println("A área é de " + area + "m²");
             }
-
         }
+
+    }
 
     public static int calcularAreaDoQuadrado(){
 
