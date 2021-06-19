@@ -17,6 +17,7 @@ public class Medidas {
 
         while(!opcao.toUpperCase().equals("S")) {
 
+            Scanner scanner = new Scanner(System.in);
             System.out.println("Escolha o Calculo Desejado");
             System.out.println("(1) - Area do Quadrado");
             System.out.println("(2) - Area do Retangulo");
@@ -25,6 +26,7 @@ public class Medidas {
             System.out.println("(5) - Tabuada");
             System.out.println("(6) - Fibonacci");
             System.out.println("(7) - Contagem Regressiva");
+            System.out.println("(8) -  Divisão por 0");
             System.out.println("(S) - Sair");
 
 
@@ -49,6 +51,8 @@ public class Medidas {
                     break;
                 case "7":
                     contagemRegressiva();
+                case "8":
+                    divisaoPorZero();
                     break;
                 case "s":
                 case "S":
@@ -163,4 +167,12 @@ public class Medidas {
         }
 
     }
+    public static void divisaoPorZero(){
+        System.out.println("Qual é o dividendo? (numero a ser divido");
+        int dividendo = entrada.nextInt();
+        System.out.println("Qual é o divisor? (numero que divide o dividendo");
+        int divisor = entrada.nextInt();
+    }
+
+}
 }
